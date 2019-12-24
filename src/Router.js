@@ -72,7 +72,7 @@ const RootStack = createStackNavigator(
     )
   },
   {
-    initialRouteName: '_initialPage',
+    initialRouteName: '_OrderPage',
     navigationOptions: ({ navigation }) => ({
       header: () => {
         if (navigation.state.routeName !== '_Restaurant') {

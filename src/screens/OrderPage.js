@@ -188,6 +188,54 @@ class OrderPage extends Component {
                 keyExtractor={(item, index) => String(index)}
               />
             </ScrollView>
+            <View
+              style={{
+                width: '100%',
+                height: responsiveHeight(8),
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'row',
+                backgroundColor: this.global.dark ? '#e6e6e6' : 'black',
+                opacity: 1,
+                padding: 5
+              }}
+            >
+              <View
+                style={{
+                  width: responsiveWidth(85),
+                  height: responsiveHeight(4),
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                  backgroundColor: 'white',
+                  marginRight: responsiveWidth(1),
+                  borderRadius: responsiveWidth(100)
+                }}
+              >
+                <Text
+                  style={{
+                    textAlign: 'right',
+                    textAlignVertical: 'center',
+                    fontSize: responsiveFontSize(1),
+                    fontFamily: 'Vazir-Medium-FD',
+                    marginRight: responsiveWidth(2.5),
+                    color: 'gray'
+                  }}
+                >
+                  جستجو در نام غذاها و رستوران ها و فروشگاه ها
+                </Text>
+              </View>
+              <Image
+                style={{
+                  width: responsiveWidth(7),
+                  height: responsiveHeight(4),
+                  tintColor: this.global.dark ? 'black' : 'white'
+                }}
+                source={{
+                  uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/s1.png'
+                }}
+              />
+            </View>
           </View>
 
           {this.global.Buy.length ? (
