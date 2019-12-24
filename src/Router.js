@@ -20,7 +20,8 @@ import {
   Menu,
   Comments,
   BuyPage,
-  NearRestaurant
+  NearRestaurant,
+  SearchPage
 } from './screens';
 
 const RootStack = createStackNavigator(
@@ -38,6 +39,7 @@ const RootStack = createStackNavigator(
     _Comments: Comments,
     _BuyPage: BuyPage,
     _NearRestaurant: NearRestaurant,
+    _SearchPage: SearchPage,
     _Restaurant: createTabNavigator(
       {
         نظرات: {

@@ -1,5 +1,6 @@
 import React, { Component } from 'reactn';
 import { View, ScrollView, Linking, StatusBar, FlatList } from 'react-native';
+} from 'react-native';
 import {
   CatCard,
   FlatlistCard,
@@ -188,7 +189,7 @@ class OrderPage extends Component {
                 keyExtractor={(item, index) => String(index)}
               />
             </ScrollView>
-            <View
+            <TouchableOpacity
               style={{
                 width: '100%',
                 height: responsiveHeight(8),
@@ -198,6 +199,12 @@ class OrderPage extends Component {
                 backgroundColor: this.global.dark ? '#e6e6e6' : 'black',
                 opacity: 1,
                 padding: 5
+              }}
+              activeOpacity={0.8}
+              onPress={() => {
+                this.props.navigation.navigate('_SearchPage', {
+                  data: this.state.alldata
+                });
               }}
             >
               <View
@@ -235,7 +242,7 @@ class OrderPage extends Component {
                   uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/s1.png'
                 }}
               />
-            </View>
+            </TouchableOpacity>
           </View>
 
           {this.global.Buy.length ? (

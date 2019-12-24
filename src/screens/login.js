@@ -360,7 +360,8 @@ class login extends Component {
               textAlign: 'center',
               textAlignVertical: 'center',
               fontSize: responsiveFontSize(2),
-              fontFamily: 'Vazir-Medium-FD'
+              fontFamily: 'Vazir-Medium-FD',
+              color: 'gray'
             }}
           >
             ورود یا ثبت نام
@@ -417,13 +418,15 @@ class login extends Component {
                 width: responsiveWidth(95),
                 height: responsiveHeight(7),
                 textAlign: 'center',
-                fontSize: 25,
+                fontSize: responsiveFontSize(2),
                 justifyContent: 'center',
                 alignItems: 'center',
                 marginBottom: responsiveHeight(2),
                 backgroundColor: 'white',
                 position: 'absolute',
-                top: responsiveHeight(0.1)
+                top: responsiveHeight(0.1),
+                fontFamily: 'Vazir-Medium-FD',
+                color: 'gray'
               }}
               placeholder=" شماره موبایل"
               value={this.state.MobileNumber}

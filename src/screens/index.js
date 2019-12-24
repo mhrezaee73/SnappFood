@@ -23,3 +23,5 @@ export * from './Chat';
 export * from './BuyPage';
 
 export * from './NearRestaurant';
+
+export * from './SearchPage';

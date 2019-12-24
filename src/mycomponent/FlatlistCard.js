@@ -114,6 +114,7 @@ class FlatlistCard extends Component {
                     flexDirection: 'column',
                     elevation: 3
                   }}
+                  activeOpacity={0.5}
                   onPress={() => {
                     this.setGlobal({ imageMenuHeader: item.ImageAddress });
                     this.props.navigation.navigate('_Restaurant', {
