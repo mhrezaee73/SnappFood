@@ -15,8 +15,6 @@ import {
   responsiveFontSize
 } from 'react-native-responsive-dimensions';
 
-//push project to git in Halfway
-
 class Boot extends Component {
   constructor(props) {
     super(props);

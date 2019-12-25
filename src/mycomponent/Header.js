@@ -86,7 +86,7 @@ class Header extends Component {
             style={{
               width: responsiveWidth(9),
               height: responsiveHeight(4)
-              //  tintColor: Mycolors(this.global.local).last,
+              //  tintColor: Colors(this.global.local).last,
             }}
             source={{
               uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/02.png'

@@ -8,7 +8,7 @@ const green = {
   medium: '#12aa00',
   last: '#00ff00'
 };
-const Mycolors = local => {
+const Colors = local => {
   switch (local) {
     case 'red':
       return red;
@@ -19,4 +19,4 @@ const Mycolors = local => {
       return red;
   }
 };
-export { Mycolors };
+export { Colors };
