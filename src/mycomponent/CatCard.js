@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ImageBackground } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import {
   responsiveHeight,
   responsiveWidth,
@@ -41,7 +41,6 @@ class CatCard extends Component {
             color: 'red',
             fontSize: responsiveFontSize(1.5),
             fontFamily: 'Vazir-Thin-FD'
-            // marginBottom: responsiveHeight(3)
           }}
         >
           CatCard

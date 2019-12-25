@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View, ActivityIndicator, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import {
   responsiveHeight,
-  responsiveWidth,
-  responsiveFontSize
+  responsiveWidth
 } from 'react-native-responsive-dimensions';
 
 class Spinner extends Component {
@@ -24,16 +23,13 @@ class Spinner extends Component {
             justifyContent: 'center',
             alignItems: 'center',
             aspectRatio: 1 / 1
-            //  backgroundColor: 'lime'
           }}
           source={
             this.props.source || {
               uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/08.gif'
             }
           }
-          //   resizeMode="center"
         />
-        {/* <ActivityIndicator size="large" color="green" /> */}
       </View>
     );
   }

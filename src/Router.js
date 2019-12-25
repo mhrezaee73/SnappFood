@@ -1,11 +1,7 @@
 import React from 'reactn';
 import { createStackNavigator, createTabNavigator } from 'react-navigation';
-import { Image, View, Text } from 'react-native';
-import {
-  responsiveHeight,
-  responsiveWidth,
-  responsiveFontSize
-} from 'react-native-responsive-dimensions';
+import { View } from 'react-native';
+import { responsiveHeight } from 'react-native-responsive-dimensions';
 import { Header, MenuHeader } from '../src/mycomponent';
 import {
   initialPage,
