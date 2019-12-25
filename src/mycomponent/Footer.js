@@ -61,7 +61,46 @@ class Footer extends Component {
           }}
           onPress={() => {
             this.setGlobal({
-              Buy: []
+              Buy: [],
+              data: [
+                {
+                  FoodName: 'غذای 1',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: 3500,
+                  selected: 0,
+                  ImageAddress: require('../img/flatlistcard/06.jpg')
+                },
+                {
+                  FoodName: 'غذای 2',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: 2000,
+                  selected: 0
+                },
+                {
+                  FoodName: 'غذای 3',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: '3500',
+                  selected: 0
+                },
+                {
+                  FoodName: 'غذای 4',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: '3500',
+                  selected: 0
+                },
+                {
+                  FoodName: 'غذای 5',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: '3500',
+                  selected: 0
+                },
+                {
+                  FoodName: 'غذای 6',
+                  details: 'تهیه شده از گوشت ها گرون و ارزون',
+                  Price: '3500',
+                  selected: 0
+                }
+              ]
             });
             Toast('سفارش های شما حذف گردید', false);
           }}

@@ -18,6 +18,9 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      selected: false
+    };
+    this.setGlobal({
       data: [
         {
           FoodName: 'غذای 1',
@@ -56,9 +59,8 @@ class Menu extends Component {
           Price: '3500',
           selected: 0
         }
-      ],
-      selected: false
-    };
+      ]
+    });
   }
 
   render() {
@@ -102,7 +104,7 @@ class Menu extends Component {
             margin: responsiveWidth(0.2),
             marginBottom: this.global.Buy.length ? responsiveHeight(9) : 0
           }}
-          data={this.state.data}
+          data={this.global.data}
           numColumns={1}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
@@ -121,7 +123,7 @@ class Menu extends Component {
                 }}
                 onPress={() => {
                   item.selected = item.selected + 1;
-                  this.setState({ data: this.state.data });
+                  this.setGlobal({ data: this.global.data });
                   this.setGlobal({ footer: true });
                   let newBuy = [...this.global.Buy];
                   newBuy.push(item);
@@ -202,7 +204,7 @@ class Menu extends Component {
                     }}
                     onPress={() => {
                       item.selected = item.selected + 1;
-                      this.setState({ data: this.state.data });
+                      this.setGlobal({ data: this.global.data });
                       this.setGlobal({ footer: true });
                       let newBuy = [...this.global.Buy];
                       newBuy.push(item);
@@ -268,7 +270,7 @@ class Menu extends Component {
                             Buy: newBuy
                           });
                           item.selected = item.selected - 1;
-                          this.setState({ data: this.state.data });
+                          this.setGlobal({ data: this.global.data });
 
                           // {
                           //   if (this.global.Buy.length == 1) {
