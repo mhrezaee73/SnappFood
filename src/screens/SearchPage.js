@@ -24,7 +24,8 @@ class SearchPage extends Component {
           justifyContent: 'center',
           alignItems: 'center',
           alignSelf: 'stretch',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          backgroundColor: this.global.dark ? '#e6e6e6' : 'black'
         }}
       >
         <View
@@ -43,13 +44,14 @@ class SearchPage extends Component {
               width: responsiveWidth(95),
               height: responsiveHeight(7),
               textAlign: 'center',
+              textAlignVertical: 'center',
               fontSize: responsiveFontSize(1.5),
               justifyContent: 'center',
               alignItems: 'center',
-              marginBottom: responsiveHeight(2),
+              //  marginBottom: responsiveHeight(2),
               backgroundColor: 'white',
-              position: 'absolute',
-              top: responsiveHeight(0.1),
+              //  position: 'absolute',
+              //  top: responsiveHeight(0.1),
               fontFamily: 'Vazir-Medium-FD',
               color: 'black'
             }}
