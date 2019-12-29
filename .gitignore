@@ -54,6 +54,7 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+<<<<<<< HEAD
 android/gradle.properties
 android/app/build.gradle
 android/app/build.gradle
@@ -61,3 +62,7 @@ android/app/build.gradle
 android/app/build.gradle
 src/screens/MyModal.js
 android/gradle.properties
+=======
+
+.vscode
+>>>>>>> ac1a6d674c6296092a8be60b8d2e38cd539204bb
