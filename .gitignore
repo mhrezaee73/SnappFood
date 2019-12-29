@@ -60,3 +60,4 @@ android/app/build.gradle
 android/app/build.gradle
 android/app/build.gradle
 src/screens/MyModal.js
+android/gradle.properties
