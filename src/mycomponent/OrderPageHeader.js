@@ -1,11 +1,5 @@
 import React, { Component } from 'reactn';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  SafeAreaView,
-  Image
-} from 'react-native';
+import { Text, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import {
   responsiveHeight,
   responsiveWidth,
@@ -101,12 +95,12 @@ class OrderPageHeader extends Component {
             alignItems: 'center'
           }}
           onPress={() => {
-            this.props.navigation.navigate('_LetterPage');
+            this.props.navigation.navigate('_Profile');
           }}
         >
           <Image
             source={{
-              uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/02-1.png'
+              uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/man-user.png'
             }}
             style={{
               width: responsiveWidth(3),
