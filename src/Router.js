@@ -84,6 +84,24 @@ const RootStack = createStackNavigator(
               title={
                 navigation.state.routeName == '_OrderPage'
                   ? 'heloo'
+                  : navigation.state.routeName == '_FlistCardMore'
+                  ? 'فروشگاه های این دسته'
+                  : navigation.state.routeName == '_LetterPage'
+                  ? 'پیام های شما'
+                  : navigation.state.routeName == '_NearRestaurant'
+                  ? 'فروشگاه های اطراف شما'
+                  : navigation.state.routeName == '_Package'
+                  ? 'بسته های خدماتی'
+                  : navigation.state.routeName == '_SearchPage'
+                  ? 'جستجو'
+                  : navigation.state.routeName == '_Chat'
+                  ? 'چت با پشتیبانی'
+                  : navigation.state.routeName == '_Profile'
+                  ? 'مشخصات شما'
+                  : navigation.state.routeName == '_CatPage'
+                  ? 'فروشگاه ها بر اساس دسته بندی'
+                  : navigation.state.routeName == '_BuyPage'
+                  ? 'سبد خرید'
                   : navigation.state.routeName
               }
             />
