@@ -1,11 +1,7 @@
 import React from 'reactn';
 import { createStackNavigator, createTabNavigator } from 'react-navigation';
-import { Image, View, Text } from 'react-native';
-import {
-  responsiveHeight,
-  responsiveWidth,
-  responsiveFontSize
-} from 'react-native-responsive-dimensions';
+import { View } from 'react-native';
+import { responsiveHeight } from 'react-native-responsive-dimensions';
 import { Header, MenuHeader } from '../src/mycomponent';
 import {
   initialPage,
@@ -21,7 +17,9 @@ import {
   Comments,
   BuyPage,
   NearRestaurant,
-  SearchPage
+  SearchPage,
+  Profile,
+  CatPage
 } from './screens';
 
 const RootStack = createStackNavigator(
@@ -40,6 +38,8 @@ const RootStack = createStackNavigator(
     _BuyPage: BuyPage,
     _NearRestaurant: NearRestaurant,
     _SearchPage: SearchPage,
+    _Profile: Profile,
+    _CatPage: CatPage,
     _Restaurant: createTabNavigator(
       {
         نظرات: {
@@ -74,7 +74,7 @@ const RootStack = createStackNavigator(
     )
   },
   {
-    initialRouteName: '_OrderPage',
+    initialRouteName: '_initialPage',
     navigationOptions: ({ navigation }) => ({
       header: () => {
         if (navigation.state.routeName !== '_Restaurant') {
@@ -118,7 +118,7 @@ const RootStack = createStackNavigator(
                 navigation={navigation}
                 title={
                   navigation.state.routeName == '_Restaurant'
-                    ? 'Hello Restaurant'
+                    ? 'چی بخوریم؟!'
                     : navigation.state.routeName
                 }
               />
