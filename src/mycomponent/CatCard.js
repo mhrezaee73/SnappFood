@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ImageBackground } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import {
   responsiveHeight,
   responsiveWidth,
@@ -22,30 +22,44 @@ class CatCard extends Component {
           flexDirection: 'row'
         }}
       >
-        <Image
+        <TouchableOpacity
           style={{
-            width: responsiveWidth(21.5),
-            height: responsiveHeight(20),
-            marginRight: responsiveWidth(1),
-            marginLeft: responsiveWidth(1.5),
-            marginTop: responsiveHeight(1),
-            borderRadius: responsiveWidth(1)
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
+            //   flexDirection: 'row'
           }}
-          source={this.props.PicAddress}
-        />
-        <Text
-          style={{
-            position: 'absolute',
-            bottom: responsiveHeight(1),
-            right: responsiveWidth(7),
-            color: 'red',
-            fontSize: responsiveFontSize(1.5),
-            fontFamily: 'Vazir-Thin-FD'
-            // marginBottom: responsiveHeight(3)
+          onPress={() => {
+            this.props.navigation.navigate('_CatPage', {
+              data: this.props.data,
+              catname: this.props.CatCard
+            });
           }}
         >
-          CatCard
-        </Text>
+          <Image
+            style={{
+              width: responsiveWidth(21.5),
+              height: responsiveHeight(20),
+              marginRight: this.props.marginRight,
+              marginLeft: this.props.marginLeft,
+              //   marginTop: responsiveHeight(1),
+              borderRadius: responsiveWidth(1)
+            }}
+            source={this.props.PicAddress}
+          />
+          <Text
+            style={{
+              position: 'absolute',
+              bottom: responsiveHeight(1),
+              //  right: responsiveWidth(7),
+              color: 'white',
+              fontSize: responsiveFontSize(1),
+              fontFamily: 'Vazir-Medium-FD'
+            }}
+          >
+            {this.props.CatCard}
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
