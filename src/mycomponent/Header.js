@@ -12,8 +12,6 @@ import {
   responsiveFontSize
 } from 'react-native-responsive-dimensions';
 
-import { Footer } from '../mycomponent';
-
 class Header extends Component {
   render() {
     return (
@@ -23,7 +21,7 @@ class Header extends Component {
           height: responsiveHeight(8),
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: '#ebebe0',
+          backgroundColor: '#fa1a75',
           flexDirection: 'row'
         }}
       >
@@ -36,18 +34,16 @@ class Header extends Component {
             alignSelf: 'stretch'
           }}
           onPress={() => {
-            this.props.navigation.replace(
-              `${this.props.navigation.state.routeName}`
-            );
+            this.props.navigation.navigate('_Profile');
           }}
         >
           <Image
             style={{
-              width: responsiveWidth(9),
-              height: responsiveHeight(5)
+              width: responsiveWidth(7),
+              height: responsiveHeight(4)
             }}
             source={{
-              uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/01-1.png'
+              uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/man-user.png'
             }}
           />
         </TouchableOpacity>
@@ -86,7 +82,6 @@ class Header extends Component {
             style={{
               width: responsiveWidth(9),
               height: responsiveHeight(4)
-              //  tintColor: Mycolors(this.global.local).last,
             }}
             source={{
               uri: 'http://mhoseinr.ir/wp-content/uploads/2019/12/02.png'
