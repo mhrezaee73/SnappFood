@@ -1,5 +1,12 @@
 import React, { Component } from 'reactn';
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  Alert
+} from 'react-native';
 import {
   responsiveHeight,
   responsiveWidth,
@@ -52,7 +59,6 @@ class BuyPage extends Component {
             justifyContent: 'center',
             alignItems: 'center',
             alignSelf: 'stretch'
-            //  backgroundColor: 'snow'
           }}
         >
           <View
@@ -61,15 +67,25 @@ class BuyPage extends Component {
               height: responsiveHeight(4),
               justifyContent: 'center',
               alignItems: 'center',
-              //   alignSelf: 'stretch',
               backgroundColor: 'white',
               flexDirection: 'row-reverse'
-              //    paddingHorizontal: responsiveWidth(10)
             }}
           >
             <Text
               style={{
-                width: '25%',
+                width: '20%',
+                textAlign: 'center',
+                textAlignVertical: 'center',
+                fontFamily: Myfonts('Medium'),
+                fontSize: responsiveFontSize(1.5),
+                color: 'black'
+              }}
+            >
+              حذف
+            </Text>
+            <Text
+              style={{
+                width: '20%',
                 textAlign: 'center',
                 textAlignVertical: 'center',
                 fontFamily: Myfonts('Medium'),
@@ -81,7 +97,7 @@ class BuyPage extends Component {
             </Text>
             <Text
               style={{
-                width: '25%',
+                width: '20%',
                 textAlign: 'center',
                 textAlignVertical: 'center',
                 fontFamily: Myfonts('Medium'),
@@ -93,7 +109,7 @@ class BuyPage extends Component {
             </Text>
             <Text
               style={{
-                width: '25%',
+                width: '20%',
                 textAlign: 'center',
                 textAlignVertical: 'center',
                 fontFamily: Myfonts('Medium'),
@@ -105,7 +121,7 @@ class BuyPage extends Component {
             </Text>
             <Text
               style={{
-                width: '25%',
+                width: '20%',
                 textAlign: 'center',
                 textAlignVertical: 'center',
                 fontFamily: Myfonts('Medium'),
@@ -144,7 +160,7 @@ class BuyPage extends Component {
                 >
                   <Text
                     style={{
-                      width: '25%',
+                      width: '20%',
                       textAlign: 'center',
                       textAlignVertical: 'center',
                       fontFamily: Myfonts('Medium'),
@@ -156,7 +172,7 @@ class BuyPage extends Component {
                   </Text>
                   <Text
                     style={{
-                      width: '25%',
+                      width: '20%',
                       textAlign: 'center',
                       textAlignVertical: 'center',
                       fontFamily: Myfonts('Medium'),
@@ -171,14 +187,14 @@ class BuyPage extends Component {
                       item.ImageAddress || require('../img/flatlistcard/02.jpg')
                     }
                     style={{
-                      width: '25%',
+                      width: '20%',
                       height: '100%',
                       borderRadius: responsiveHeight(0.2)
                     }}
                   />
                   <Text
                     style={{
-                      width: '25%',
+                      width: '20%',
                       textAlign: 'center',
                       textAlignVertical: 'center',
                       fontFamily: Myfonts('Medium'),
@@ -188,6 +204,56 @@ class BuyPage extends Component {
                   >
                     {index + 1}
                   </Text>
+                  <TouchableOpacity
+                    style={{
+                      width: responsiveWidth(8),
+                      height: responsiveWidth(8),
+                      justifyContent: 'center',
+                      alignItems: 'center'
+                    }}
+                    onPress={() => {
+                      Alert.alert(
+                        'حذف',
+                        'آیا از حذف این آیتم اطمینان دارید؟',
+                        [
+                          {
+                            text: 'بله ، منصرف شدم',
+                            onPress: () => {
+                              let newBuy = [...this.global.Buy];
+                              let s = newBuy.findIndex(
+                                x => x.FoodName == item.FoodName
+                              );
+                              newBuy.splice(s, 1);
+                              this.setGlobal({
+                                Buy: newBuy
+                              });
+                              item.selected = item.selected - 1;
+                              this.setGlobal({ data: this.global.data });
+                            }
+                          },
+                          {
+                            text: 'نه ، میخرمش',
+                            onPress: () => {}
+                          }
+                        ],
+                        {
+                          cancelable: true
+                        }
+                      );
+                    }}
+                  >
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        textAlignVertical: 'center',
+                        fontFamily: Myfonts('Medium'),
+                        fontSize: responsiveFontSize(3),
+                        color: 'red'
+                      }}
+                    >
+                      {'×'}
+                    </Text>
+                  </TouchableOpacity>
                 </View>
               );
             }}
